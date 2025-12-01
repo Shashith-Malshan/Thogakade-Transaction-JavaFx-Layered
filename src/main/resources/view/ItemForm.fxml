@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="712.0" prefWidth="1146.0" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormController">
+    <children>
+        <VBox layoutX="467.0" layoutY="110.0" prefHeight="580.0" prefWidth="669.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-padding: 20;                            -fx-effect: dropshadow(gaussian, #00000012, 16, 0, 0, 8);">
+            <children>
+                <TableView fx:id="tableView" prefHeight="540.0" prefWidth="710.0" style="-fx-background-radius: 14; -fx-font-size: 13.5;">
+                    <columns>
+                        <TableColumn fx:id="colCustId" prefWidth="56.799983978271484" text="ID" />
+                        <TableColumn fx:id="colTitle" prefWidth="50.4000244140625" text="Title" />
+                        <TableColumn fx:id="colName" prefWidth="126.39996337890625" text="Name" />
+                        <TableColumn fx:id="colAddress" prefWidth="124.0" text="Address" />
+                        <TableColumn fx:id="colCity" prefWidth="83.99993896484375" text="City" />
+                        <TableColumn fx:id="colProvince" prefWidth="109.60009765625" text="Province" />
+                        <TableColumn fx:id="colPostalCode" minWidth="7.9998779296875" prefWidth="83.9998779296875" text="Postal Code" />
+                    </columns>
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+            </children>
+        </VBox>
+        <Pane prefHeight="78.0" prefWidth="1149.0" style="-fx-background-color: #1E293B;">
+            <children>
+                <Text fill="WHITE" layoutX="17.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thogakade">
+                    <font>
+                        <Font name="Algerian" size="24.0" />
+                    </font>
+                </Text>
+                <Text fill="#d4d4d4" layoutX="17.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Point Of Sale Management System" />
+            </children>
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color opacity="0.4012157917022705" />
+                    </color>
+                </DropShadow>
+            </effect>
+        </Pane>
+        <VBox layoutX="10.0" layoutY="10.0" spacing="18" />
+        <VBox layoutX="13.0" layoutY="110.0" prefHeight="576.0" prefWidth="443.0" style="-fx-background-color: white; -fx-background-radius: 16; -fx-padding: 28 35;                            -fx-effect: dropshadow(gaussian, #00000012, 16, 0, 0, 8);">
+            <children>
+                <GridPane alignment="CENTER_LEFT" hgap="20" prefHeight="448.0" prefWidth="375.0" vgap="16">
+                    <columnConstraints>
+                        <ColumnConstraints percentWidth="32" />
+                        <ColumnConstraints percentWidth="68" />
+                    </columnConstraints>
+                    <children>
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Customer ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                        <TextField fx:id="txtCustId" promptText="C001" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Title" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="cmbTitle" prefWidth="180" promptText="Select title" style="-fx-background-radius: 10; -fx-padding: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Name" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                        <TextField fx:id="txtName" promptText="Full name" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Address" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                        <TextField fx:id="txtAddress" promptText="Street address" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="City" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                        <TextField fx:id="txtCity" promptText="City" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Province" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                        <TextField fx:id="txtProvince" promptText="Province" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <Label style="-fx-font-weight: 600; -fx-text-fill: #475569;" text="Postal Code" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                        <TextField fx:id="txtPostalCode" promptText="10350" style="-fx-background-radius: 10; -fx-padding: 12; -fx-font-size: 13.5;                                           -fx-border-color: #cbd5e1; -fx-border-radius: 10; -fx-background-color: #f8fafc;" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                    </children>
+                    <rowConstraints>
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                        <RowConstraints />
+                    </rowConstraints>
+                </GridPane>
+                <HBox alignment="CENTER_RIGHT" spacing="16" style="-fx-padding: 24 0 8 0;">
+                    <children>
+                        <Button fx:id="btnAddOnAction" onAction="#btnAddOnAction" style="-fx-background-color: #0ea5e9; -fx-text-fill: white; -fx-font-weight: bold;                                        -fx-background-radius: 12; -fx-padding: 12 28; -fx-font-size: 14;                                        -fx-effect: dropshadow(gaussian, #0891b2, 8, 0.3, 0, 3);" text="Add" />
+                        <Button fx:id="btnUpdateOnAction" onAction="#btnUpdateOnAction" style="-fx-background-color: #6366f1; -fx-text-fill: white; -fx-font-weight: bold;                                        -fx-background-radius: 12; -fx-padding: 12 28; -fx-font-size: 14;                                        -fx-effect: dropshadow(gaussian, #4f46e5, 8, 0.3, 0, 3);" text="Update" />
+                        <Button fx:id="btnDeleteOnAction" onAction="#btnDeleteOnAction" style="-fx-background-color: #ef4444; -fx-text-fill: white; -fx-font-weight: bold;                                        -fx-background-radius: 12; -fx-padding: 12 28; -fx-font-size: 14;                                        -fx-effect: dropshadow(gaussian, #dc2626, 8, 0.3, 0, 3);" text="Delete" />
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
